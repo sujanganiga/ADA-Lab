@@ -10,7 +10,7 @@ int  Partition(int arr[],int low, int high){
     do{
         do{
             i++;
-        }while(arr[i]<=pivot&&i<high);
+        }while(arr[i]<=pivot);
         do{
             j--;
         }while(pivot<arr[j]);

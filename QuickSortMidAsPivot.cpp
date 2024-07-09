@@ -29,17 +29,21 @@ void QuickSort(int arr[], int low, int high) {
 int main(){
     int size[]={100,200,500,1000,2000,5000,10000};
     int k=0;
+            srand(time(0));
+
     while(k<7){
         int n=size[k];
         int *arr=new int[n];
-        for(int i=0;i<n;i++){
+        for(int i=0;i<10;i++){
             arr[i]=rand()%10000;
         }
         clock_t start=clock();
-        QuickSort(arr,0,n);
+        QuickSort(arr,0,10);
         clock_t end=clock();
         double duration = double(end - start) / CLOCKS_PER_SEC;
         cout << "Time taken to sort " << n << " elements: " << duration << " seconds" << endl;
         k++;
+        for ( int i=0;i<10;i++)
+            cout<<arr[i]<<" ";
     }
 }
